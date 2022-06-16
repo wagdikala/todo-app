@@ -24,7 +24,7 @@ function Summary({ categories }) {
               styles={buildStyles({
                 strokeLinecap: "butt",
                 pathColor: `#${colors[item.id]}`,
-                textColor: `#${colors[item.id]}`
+                textColor: `#${colors[item.id]}`,
               })}
             />
           </div>
