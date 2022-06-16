@@ -33,12 +33,10 @@ export const TaskProvider = ({ children }) => {
     if (task.isEditing === true) {
       setTasks(
         tasks.map((item) => {
-          console.log("same");
           return { ...item, isEditing: false };
         })
       );
     } else {
-      console.log("name");
       setTasks(
         tasks
           .map((item) => {
