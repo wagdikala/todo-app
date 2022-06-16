@@ -2,8 +2,10 @@ import "./task.scss";
 import Card from "../shared/Card";
 import TasksContext from "../../context/TasksContext";
 import { useContext } from "react";
+import { useState } from "react/cjs/react.production.min";
 
 function Task({ task }) {
+  // const [editing, setEditing] = useState(false);
   const { deleteTask, setComplete } = useContext(TasksContext);
 
   const handleCompleteClick = () => {
