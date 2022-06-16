@@ -1,12 +1,11 @@
-@import "config";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap');
-
+@import "../index.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,400&display=swap");
 
 .wrapper {
   font-size: $roboto-body;
   width: 100vw;
   height: 100vh;
-  background-color:$light-background;
+  background-color: $background-light;
 }
 
 .main {

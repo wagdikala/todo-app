@@ -1,7 +1,7 @@
-@import "config";
+@import "../index.scss";
 
 .wrapper.dark {
-  background-color: $dark-background;
+  background-color: $background-dark;
   color: $secondary-text;
 
   .profile {
@@ -9,10 +9,6 @@
   }
 
   .summary {
-    background-color: $dark-surface;
+    background-color: $surface-dark;
   }
-  
 }
-
-
-
