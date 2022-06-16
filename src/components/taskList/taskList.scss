@@ -1,0 +1,22 @@
+@use '../config' as *;
+
+@mixin roboto {
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: 0.25%;
+  color: $primary-color;
+}
+
+.container {
+
+  .num-of-taks {
+    @include roboto;
+    margin: 8px 20px;
+  }
+
+  .task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

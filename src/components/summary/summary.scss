@@ -1,0 +1,52 @@
+@import "../config";
+
+.summary-container {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  padding: 5px 0;
+  justify-content: space-between;
+  gap: 24px;  
+
+  .summary {
+    display: flex;
+    background-color: $light-surface;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    height: 120px;
+    min-width: 250px;
+    border-radius: 20px;
+    box-shadow: $shadow;
+
+
+    .progress-bar {
+      height: 100px;
+      width: 100px;
+    }
+
+    .text-stat {
+      .title {
+        font-size: $roboto-h5;
+      }
+  
+      p {
+        font-size: 10px;
+        color: gray;
+      }
+    }
+  }
+
+  .work {
+    .text-stat {
+      color: $secondary-color;
+    }
+  }
+
+  .home {
+    .text-stat {
+      color: $primary-color;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+
+
+@mixin rounded {
+  border-radius: 15px;
+}
+
+@mixin rp {
+
+}
+
+@mixin name {
+  
+}
+
+$poppins-h1: 48.8px;
+$poppins-h2: 39px;
+$poppins-h3: 31.3px;
+$poppins-h4: 25px;
+$poppins-h5: 20px;
+
+$poppins-body: 16px;
+
+$roboto-h1: 96px;
+$roboto-h2: 60px;
+$roboto-h3: 34px;
+$roboto-h4: 24px;
+$roboto-h5: 20px;
+
+$roboto-body: 16px;
+
+$primary-text: #221339;
+$secondary-text: #f3f3f5;
+$surface-light: #fff;
+$background-light: #F7F8F9;
+$primary-color: #F72585;
+$secondary-color: #480CA8;
+
+$secondary-dark: #bb91ff;
+$surface-dark: #283042;
+$background-dark: #1c2230;
+
+$shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);

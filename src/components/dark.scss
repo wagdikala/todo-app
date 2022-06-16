@@ -1,0 +1,18 @@
+@import "config";
+
+.wrapper.dark {
+  background-color: $dark-background;
+  color: $secondary-text;
+
+  .profile {
+    fill: $secondary-text;
+  }
+
+  .summary {
+    background-color: $dark-surface;
+  }
+  
+}
+
+
+

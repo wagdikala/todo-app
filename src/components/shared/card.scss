@@ -1,0 +1,34 @@
+@import "../config";
+
+.card {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: $shadow;
+  padding: 0 20px;
+
+  .left {
+    display: flex;
+    gap: 12px;
+    svg {
+      fill: $primary-color;
+      height: 18px;
+    }
+  }
+
+  .right {
+    display: flex;
+    gap: 12px;
+    svg {
+      fill: $primary-text;
+    }
+  }
+
+  svg {
+    height: 18px;
+  }
+
+}
