@@ -1,9 +1,26 @@
-@import "../config";
+@import "../../index.scss";
 
 .task {
   .task-content {
-    // animation: fade-in 0.5s;
-    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+
+    input {
+      width: 100%;
+      height: 30px;
+      border: 0;
+      background-color: $gray-50;
+      border-radius: 10px;
+      padding-left: 10px;
+      outline: none;
+
+      &:disabled {
+        border: none;
+        background: transparent;
+        color: $primary-text;
+      }
+    }
   }
   .task-content.completed {
     text-decoration: line-through;

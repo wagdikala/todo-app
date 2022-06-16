@@ -1,4 +1,4 @@
-@import "../config";
+@import "../../index.scss";
 
 .card {
   width: 100%;
@@ -9,9 +9,12 @@
   border-radius: 15px;
   box-shadow: $shadow;
   padding: 0 20px;
+  background-color: $surface-light;
 
   .left {
     display: flex;
+    width: 100%;
+    align-items: center;
     gap: 12px;
     svg {
       fill: $primary-color;
@@ -30,5 +33,4 @@
   svg {
     height: 18px;
   }
-
 }

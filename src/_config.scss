@@ -1,15 +1,11 @@
-
-
 @mixin rounded {
   border-radius: 15px;
 }
 
 @mixin rp {
-
 }
 
 @mixin name {
-  
 }
 
 $poppins-h1: 48.8px;
@@ -31,9 +27,9 @@ $roboto-body: 16px;
 $primary-text: #221339;
 $secondary-text: #f3f3f5;
 $surface-light: #fff;
-$background-light: #F7F8F9;
-$primary-color: #F72585;
-$secondary-color: #480CA8;
+$background-light: #f7f8f9;
+$primary-color: #f72585;
+$secondary-color: #480ca8;
 
 $secondary-dark: #bb91ff;
 $surface-dark: #283042;

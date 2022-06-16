@@ -1,7 +1,6 @@
-@import "../config";
+@import "../../index.scss";
 
 .body {
-
   display: flex;
   flex-direction: column;
   gap: 48px;
@@ -15,18 +14,16 @@
     padding: 12px;
     border-radius: 15px;
     box-shadow: $shadow;
-    background-color: $light-surface;
+    background-color: $surface-light;
 
     svg {
       fill: $primary-text;
       height: 30px;
     }
-
   }
   .input-task {
     border-style: none;
     outline: none;
-
 
     &::placeholder {
       color: gray;
