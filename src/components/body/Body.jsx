@@ -6,14 +6,14 @@ import { useState, useContext } from "react";
 
 function Body() {
   const [text, setText] = useState("");
-  const [btnDisabled, setBtnDisabled] = useState("none");
+  const [btnDisabled, setBtnDisabled] = useState(true);
   const { addTask } = useContext(TasksContext);
 
   const handleTextChange = (e) => {
     if (e.target.value.length === 0) {
-      setBtnDisabled("none");
+      setBtnDisabled(true);
     } else {
-      setBtnDisabled("auto");
+      setBtnDisabled(false);
     }
     setText(e.target.value);
   };
@@ -35,7 +35,8 @@ function Body() {
           value={text}
         />
         <svg
-          pointerEvents={btnDisabled}
+          className={`add-btn ${btnDisabled && "disabled"}`}
+          pointerEvents={btnDisabled ? "none" : "auto"}
           onClick={() => handleAddTask()}
           viewBox="0 0 512 512"
         >

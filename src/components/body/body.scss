@@ -16,9 +16,22 @@
     box-shadow: $shadow;
     background-color: $surface-light;
 
-    svg {
+    .add-btn {
       fill: $primary-text;
       height: 30px;
+      transition: all 0.2s ease-in-out;
+
+      &.disabled {
+        // fill: $gray-50;
+        opacity: 0.2;
+      }
+    }
+
+    input {
+      // background-color: antiquewhite;
+      padding: 0 10px;
+      margin-right: 10px;
+      width: 100%;
     }
   }
   .input-task {
@@ -30,5 +43,14 @@
       font-size: 14px;
       font-style: italic;
     }
+  }
+}
+
+@keyframes add-btn-animation {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
   }
 }
