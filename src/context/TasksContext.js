@@ -17,10 +17,11 @@ export const TaskProvider = ({ children }) => {
   };
 
   const setComplete = (taskId) => {
+    console.log(taskId);
     setTasks(() =>
       tasks.map((task) => {
         if (task.id === taskId) {
-          return { ...task, isCompleted: task.isCompleted };
+          return { ...task, isCompleted: !task.isCompleted };
         }
         return task;
       })
