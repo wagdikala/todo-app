@@ -7,13 +7,12 @@
     },
     {
       "id": 2,
-      "taskTitle": "Complete algorithmdffff",
+      "taskTitle": "Complete algorithmdffffff",
       "isCompleted": true
     },
     {
-      "taskTitle": "Add another onef23f",
-      "isCompleted": false,
-      "isEditing": false,
+      "taskTitle": "Add another onef23fffs",
+      "isCompleted": true,
       "id": 3
     }
   ]

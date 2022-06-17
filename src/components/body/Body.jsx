@@ -18,7 +18,7 @@ function Body() {
   };
 
   const handleAddTask = () => {
-    addTask({ taskTitle: text, isCompleted: false, isEditing: false });
+    addTask({ taskTitle: text, isCompleted: false });
     setBtnDisabled("none");
     setText("");
   };
