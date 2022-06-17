@@ -5,12 +5,14 @@ import Summary from "./summary/Summary";
 import Body from "./body/Body";
 import { categories } from "./data/categories";
 import { TaskProvider } from "../context/TasksContext";
+import CategoryModal from "./modal/CategoryModal";
 
 function App() {
   return (
     <TaskProvider>
       <div className="wrapper">
         <div className="main">
+          <CategoryModal className="modal" />
           <Header user={"Wagdi"} />
           <Summary categories={categories} />
           <Body />

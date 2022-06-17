@@ -19,6 +19,50 @@ button {
 @mixin name {
 }
 
+@mixin poppins-text-base {
+  font-family: $poppins-type;
+  color: $primary-text;
+}
+
+@mixin h1-poppins {
+  @include poppins-text-base();
+  font-size: $poppins-h1;
+}
+
+@mixin h2-poppins {
+  @include poppins-text-base();
+  font-size: $poppins-h2;
+}
+
+@mixin h3-poppins {
+  @include poppins-text-base();
+  font-size: $poppins-h3;
+}
+
+@mixin h4-poppins {
+  @include poppins-text-base();
+  font-size: $poppins-h4;
+}
+
+@mixin h5-poppins {
+  @include poppins-text-base();
+  font-size: $poppins-h5;
+}
+
+@mixin body-poppins {
+  @include poppins-text-base();
+  font-size: $poppins-body;
+}
+
+@mixin category-poppins {
+  @include poppins-text-base();
+  font-size: $poppins-category;
+  font-weight: 700;
+  color: $secondary-text;
+}
+
+$poppins-type: "Poppins";
+
 $poppins-h1: 48.8px;
 $poppins-h2: 39px;
 $poppins-h3: 31.3px;
@@ -26,6 +70,7 @@ $poppins-h4: 25px;
 $poppins-h5: 20px;
 
 $poppins-body: 16px;
+$poppins-category: 20px;
 
 $roboto-h1: 96px;
 $roboto-h2: 60px;
@@ -41,6 +86,7 @@ $surface-light: #fff;
 $background-light: #f7f8f9;
 $primary-color: #f72585;
 $secondary-color: #480ca8;
+$category-color: #4cc9f0;
 $light-gray: rgba(125, 125, 125, 0.1);
 $gray-50: rgba(125, 125, 125, 0.5);
 

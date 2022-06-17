@@ -14,7 +14,13 @@ function Summary({ categories }) {
   };
 
   useEffect(() => {
-    setWorkPercentage(Math.floor((completedTasks() / tasks.length) * 100));
+    const percent = Math.floor((completedTasks() / tasks.length) * 100);
+    if (tasks.length > 0) {
+      setWorkPercentage(percent);
+    }
+    // } else {
+    //   setWorkPercentage("N/A");
+    // }
   }, [tasks]);
 
   return (
@@ -26,12 +32,18 @@ function Summary({ categories }) {
         >
           <div className="text-stat">
             <h3 className="title">{item.categoryName}</h3>
-            <p>{`${tasks.length} Tasks`}</p>
+            <p>
+              {tasks.length === 0
+                ? `No Tasks`
+                : tasks.length === 1
+                ? `${tasks.length} Task`
+                : `${tasks.length} Tasks`}{" "}
+            </p>
           </div>
           <div className="progress-bar">
             <CircularProgressbar
               value={workPercentage}
-              text={`${workPercentage}%`}
+              text={workPercentage === 0 ? `` : `${workPercentage}%`}
               strokeWidth={9}
               styles={buildStyles({
                 strokeLinecap: "butt",

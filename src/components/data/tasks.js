@@ -1,5 +1,5 @@
 export const tasksArr = [
-  {
+  {ids:{{
     id: 1,
     taskTitle: "Buy milk",
     isCompleted: false
@@ -18,5 +18,5 @@ export const tasksArr = [
     id: 4,
     taskTitle: "Clean the bike",
     isCompleted: true
-  }
+  }}}
 ];

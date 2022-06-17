@@ -1,18 +1,20 @@
 {
   "tasks": [
     {
+      "taskTitle": "1",
+      "isCompleted": false,
       "id": 1,
-      "taskTitle": "Buy milk backendt",
-      "isCompleted": true
+      "category": "Work"
     },
     {
+      "taskTitle": "sdf",
+      "isCompleted": false,
       "id": 2,
-      "taskTitle": "Complete algorithmdffffff",
-      "isCompleted": true
+      "category": "Home"
     },
     {
-      "taskTitle": "Add another onef23fffs",
-      "isCompleted": true,
+      "taskTitle": "sdf2222",
+      "isCompleted": false,
       "id": 3
     }
   ]
