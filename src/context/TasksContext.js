@@ -34,8 +34,8 @@ export const TaskProvider = ({ children }) => {
   const deleteTask = async (taskId) => {
     if (window.confirm("Are you sure you want to delete?")) {
       await fetch(`tasks/${taskId}`, { method: "DELETE" });
+      setTasks(tasks.filter((task) => task.id !== taskId));
     }
-    setTasks(tasks.filter((task) => task.id !== taskId));
   };
 
   const setComplete = async (task) => {
@@ -52,46 +52,14 @@ export const TaskProvider = ({ children }) => {
   };
 
   const doneEditing = async (task) => {
-    const response = await fetch(`/tasks/${task.id}`, {
+    await fetch(`/tasks/${task.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(task),
     });
-
-    // if (task.isEditing === true) {
-    //   task.isEditing = false;
-    //   const response = await fetch(`/tasks/${task.id}`, {
-    //     method: "PUT",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify(task),
-    //   });
-
-    //   const data = await response.json();
-    //   console.log(data);
-
-    //   // setTasks(
-    //   //   tasks.map((item) => {
-    //   //     return { ...item, isEditing: false };
-    //   //   })
-    //   // );
-    // } else {
-    //   setTasks(
-    //     tasks
-    //       .map((item) => {
-    //         return { ...item, isEditing: false };
-    //       })
-    //       .map((item) => {
-    //         if (item.id === task.id) {
-    //           return { ...item, isEditing: true };
-    //         }
-    //         return { ...item };
-    //       })
-    //   );
-    // }
+    console.log(tasks);
   };
 
   return (

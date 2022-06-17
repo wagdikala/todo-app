@@ -14,7 +14,7 @@ function Summary({ categories }) {
   };
 
   useEffect(() => {
-    setWorkPercentage(((completedTasks() / tasks.length) * 100).toFixed(0));
+    setWorkPercentage(Math.floor((completedTasks() / tasks.length) * 100));
   }, [tasks]);
 
   return (
