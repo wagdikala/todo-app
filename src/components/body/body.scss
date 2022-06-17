@@ -22,7 +22,6 @@
       transition: all 0.2s ease-in-out;
 
       &.disabled {
-        // fill: $gray-50;
         opacity: 0.2;
       }
     }
@@ -38,7 +37,7 @@
     outline: none;
 
     &::placeholder {
-      color: gray;
+      color: rgba(0, 0, 0, 0.3);
       font-size: 14px;
       font-style: italic;
     }

@@ -59,7 +59,6 @@ export const TaskProvider = ({ children }) => {
       },
       body: JSON.stringify(task),
     });
-    console.log(tasks);
   };
 
   return (

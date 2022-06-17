@@ -3,18 +3,16 @@
     {
       "id": 1,
       "taskTitle": "Buy milk backendt",
-      "isCompleted": false,
-      "isEditing": false
+      "isCompleted": true
     },
     {
       "id": 2,
       "taskTitle": "Complete algorithmdffff",
-      "isCompleted": false,
-      "isEditing": false
+      "isCompleted": true
     },
     {
-      "taskTitle": "Add another onef23",
-      "isCompleted": true,
+      "taskTitle": "Add another onef23f",
+      "isCompleted": false,
       "isEditing": false,
       "id": 3
     }
