@@ -2,15 +2,20 @@ import "./task.scss";
 import Card from "../shared/Card";
 import TasksContext from "../../context/TasksContext";
 import { useContext, useState } from "react";
+import Spinner from "../shared/Spinner";
 
 function Task({ task }) {
-  const { deleteTask, setComplete, isEditing } = useContext(TasksContext);
+  const { deleteTask, setComplete, isEditing, loading } =
+    useContext(TasksContext);
 
   const handleCompleteClick = () => {
-    setComplete(task.id);
+    task.isCompleted = !task.isCompleted;
+    setComplete(task);
   };
 
-  return (
+  return loading ? (
+    <Spinner />
+  ) : (
     <div className="task">
       <Card>
         <div className="left">

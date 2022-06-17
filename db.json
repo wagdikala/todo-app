@@ -1,0 +1,28 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "taskTitle": "Buy milk backend",
+      "isCompleted": true,
+      "isEditing": false
+    },
+    {
+      "id": 2,
+      "taskTitle": "Complete algorithm",
+      "isCompleted": true,
+      "isEditing": false
+    },
+    {
+      "id": 3,
+      "taskTitle": "Prepare presentation",
+      "isCompleted": true,
+      "isEditing": false
+    },
+    {
+      "isCompleted": false,
+      "taskTitle": "Dont Prepare presentation",
+      "isEditing": false,
+      "id": 4
+    }
+  ]
+}

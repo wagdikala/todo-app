@@ -1,10 +1,22 @@
 import "./summary.scss";
+import { useContext, useEffect, useState } from "react";
+import TasksContext from "../../context/TasksContext";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { colors } from "../data/categoriesColors";
 
 function Summary({ categories }) {
-  const workPercentage = 66;
+  const [workPercentage, setWorkPercentage] = useState(0);
+  const { tasks } = useContext(TasksContext);
+
+  const completedTasks = () => {
+    return tasks.filter((item) => item.isCompleted).reduce((acc) => ++acc, 0);
+  };
+
+  useEffect(() => {
+    setWorkPercentage(((completedTasks() / tasks.length) * 100).toFixed(0));
+  }, [tasks]);
+
   return (
     <div className="summary-container">
       {categories.map((item) => (
@@ -14,7 +26,7 @@ function Summary({ categories }) {
         >
           <div className="text-stat">
             <h3 className="title">{item.categoryName}</h3>
-            <p>{`${item.numberOfTasks} Tasks`}</p>
+            <p>{`${tasks.length} Tasks`}</p>
           </div>
           <div className="progress-bar">
             <CircularProgressbar

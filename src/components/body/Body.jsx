@@ -1,6 +1,5 @@
 import TaskList from "../taskList/TaskList";
 import "./body.scss";
-import { v4 as uuidv4 } from "uuid";
 import TasksContext from "../../context/TasksContext";
 import { useState, useContext } from "react";
 
@@ -19,7 +18,7 @@ function Body() {
   };
 
   const handleAddTask = () => {
-    addTask({ id: uuidv4(), taskTitle: text, isCompleted: false });
+    addTask({ taskTitle: text, isCompleted: false, isEditing: false });
     setBtnDisabled("none");
     setText("");
   };
