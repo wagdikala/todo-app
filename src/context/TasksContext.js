@@ -5,8 +5,10 @@ const TasksContext = createContext();
 
 // Providing the context
 export const TaskProvider = ({ children }) => {
+  const [isEditing, setIsEditing] = useState(false);
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     fetchData();
@@ -59,6 +61,7 @@ export const TaskProvider = ({ children }) => {
       },
       body: JSON.stringify(task),
     });
+    setIsEditing(false);
   };
 
   return (
@@ -70,6 +73,10 @@ export const TaskProvider = ({ children }) => {
         setComplete,
         doneEditing,
         loading,
+        isEditing,
+        setIsEditing,
+        setShowModal,
+        showModal,
       }}
     >
       {children}

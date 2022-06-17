@@ -5,7 +5,7 @@ import { useState, useContext } from "react";
 function AddTask() {
   const [text, setText] = useState("");
   const [btnDisabled, setBtnDisabled] = useState(true);
-  const { addTask } = useContext(TasksContext);
+  const { addTask, setShowModal } = useContext(TasksContext);
 
   const handleTextChange = (e) => {
     if (e.target.value.length === 0) {
@@ -17,6 +17,7 @@ function AddTask() {
   };
 
   const handleAddTask = () => {
+    setShowModal(true);
     addTask({ taskTitle: text, isCompleted: false });
     setBtnDisabled("none");
     setText("");

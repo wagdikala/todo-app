@@ -1,12 +1,22 @@
 import "./category-modal.scss";
+import TasksContext from "../../context/TasksContext";
+import { useEffect, useContext } from "react";
 
 function CategoryModal() {
+  const { showModal, setShowModal } = useContext(TasksContext);
+
+  const handleSelect = () => {
+    setShowModal(false);
+  };
+
+  useEffect(() => {}, [showModal]);
+
   return (
-    <div className="modal">
+    <div className="modal" style={{ display: showModal ? "flex" : "none" }}>
       <h1>Select Category</h1>
       <div className="container">
         <div className="category-select">
-          <div className="category">
+          <div onClick={() => handleSelect()} className="category">
             <p>Work</p>
           </div>
           <div className="category">
