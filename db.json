@@ -8,21 +8,9 @@
     },
     {
       "id": 2,
-      "taskTitle": "Complete algorithm",
+      "taskTitle": "Complete algorithmdf",
       "isCompleted": true,
       "isEditing": false
-    },
-    {
-      "id": 3,
-      "taskTitle": "Prepare presentation",
-      "isCompleted": true,
-      "isEditing": false
-    },
-    {
-      "isCompleted": false,
-      "taskTitle": "Dont Prepare presentation",
-      "isEditing": false,
-      "id": 4
     }
   ]
 }

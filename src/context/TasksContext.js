@@ -51,44 +51,52 @@ export const TaskProvider = ({ children }) => {
     setTasks(tasks.map((item) => (task.id === item.id ? data : item)));
   };
 
-  const isEditing = async (task) => {
-    if (task.isEditing === true) {
-      task.isEditing = false;
-      const response = await fetch(`/tasks/${task.id}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(task),
-      });
+  const doneEditing = async (task) => {
+    const response = await fetch(`/tasks/${task.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(task),
+    });
 
-      const data = await response.json();
-      console.log(data);
+    // if (task.isEditing === true) {
+    //   task.isEditing = false;
+    //   const response = await fetch(`/tasks/${task.id}`, {
+    //     method: "PUT",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(task),
+    //   });
 
-      // setTasks(
-      //   tasks.map((item) => {
-      //     return { ...item, isEditing: false };
-      //   })
-      // );
-    } else {
-      setTasks(
-        tasks
-          .map((item) => {
-            return { ...item, isEditing: false };
-          })
-          .map((item) => {
-            if (item.id === task.id) {
-              return { ...item, isEditing: true };
-            }
-            return { ...item };
-          })
-      );
-    }
+    //   const data = await response.json();
+    //   console.log(data);
+
+    //   // setTasks(
+    //   //   tasks.map((item) => {
+    //   //     return { ...item, isEditing: false };
+    //   //   })
+    //   // );
+    // } else {
+    //   setTasks(
+    //     tasks
+    //       .map((item) => {
+    //         return { ...item, isEditing: false };
+    //       })
+    //       .map((item) => {
+    //         if (item.id === task.id) {
+    //           return { ...item, isEditing: true };
+    //         }
+    //         return { ...item };
+    //       })
+    //   );
+    // }
   };
 
   return (
     <TasksContext.Provider
-      value={{ tasks, addTask, deleteTask, setComplete, isEditing, loading }}
+      value={{ tasks, addTask, deleteTask, setComplete, doneEditing, loading }}
     >
       {children}
     </TasksContext.Provider>
