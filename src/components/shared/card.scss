@@ -16,8 +16,14 @@
     width: 100%;
     align-items: center;
     gap: 12px;
-    svg {
+
+    .work {
       fill: $primary-color;
+      height: 18px;
+    }
+
+    .home {
+      fill: $secondary-color;
       height: 18px;
     }
   }

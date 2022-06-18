@@ -16,7 +16,7 @@ export const TaskProvider = ({ children }) => {
   }, []);
 
   const fetchData = async () => {
-    const response = await fetch("/tasks?_sort=id&_order=desc");
+    const response = await fetch("/tasks");
     const data = await response.json();
     setTasks(data);
     setLoading(false);
@@ -30,8 +30,9 @@ export const TaskProvider = ({ children }) => {
       },
       body: JSON.stringify(task),
     });
-    const data = await response.json();
-    setTasks([data, ...tasks]);
+    fetchData();
+    // const data = await response.json();
+    // setTasks([...tasks, data]);
   };
 
   const deleteTask = async (taskId) => {

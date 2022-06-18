@@ -1,16 +1,15 @@
 @import "../../index.scss";
 
-@mixin roboto {
-  font-size: 12px;
-  line-height: 21px;
-  letter-spacing: 0.25%;
-  color: $primary-color;
-}
-
 .container {
   .num-of-taks {
     @include roboto;
     margin: 8px 20px;
+    &.work {
+      color: $primary-color;
+    }
+    &.home {
+      color: $secondary-color;
+    }
   }
 
   .task-list {

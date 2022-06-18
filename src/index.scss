@@ -9,8 +9,11 @@ button {
   border: none;
 }
 
-@mixin rounded {
-  border-radius: 15px;
+@mixin roboto {
+  font-size: 12px;
+  line-height: 21px;
+  letter-spacing: 0.25%;
+  color: $primary-color;
 }
 
 @mixin rp {

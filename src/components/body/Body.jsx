@@ -19,6 +19,7 @@ function Body() {
       {categories.map((cat) => {
         return (
           <TaskList
+            category={cat}
             key={uuidv4()}
             tasks={tasks.filter((task) => task.category === cat)}
           />
