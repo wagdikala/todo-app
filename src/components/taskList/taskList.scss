@@ -5,10 +5,10 @@
     @include roboto;
     margin: 8px 20px;
     &.work {
-      color: $primary-color;
+      color: $secondary-color;
     }
     &.home {
-      color: $secondary-color;
+      color: $primary-color;
     }
   }
 

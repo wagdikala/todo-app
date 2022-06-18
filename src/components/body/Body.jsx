@@ -1,17 +1,15 @@
 import TaskList from "../taskList/TaskList";
-import AddTask from "../addTask/AddTask";
+import Spinner from "../shared/Spinner";
 import "./body.scss";
+import AddTask from "../addTask/AddTask";
 import { useContext, useEffect, useState } from "react";
+import CategoriesContext from "../../context/CategoriesContext";
 import TasksContext from "../../context/TasksContext";
 import { v4 as uuidv4 } from "uuid";
 
 function Body() {
   const { tasks } = useContext(TasksContext);
-  const [categories, setCategories] = useState([]);
-
-  useEffect(() => {
-    setCategories([...new Set(tasks.map((task) => task.category))]);
-  }, [tasks]);
+  const { categories, loading } = useContext(CategoriesContext);
 
   return (
     <div className="body">
@@ -19,9 +17,11 @@ function Body() {
       {categories.map((cat) => {
         return (
           <TaskList
+            tasks={tasks.filter(
+              (task) => task.categoryName === cat.categoryName
+            )}
             category={cat}
-            key={uuidv4()}
-            tasks={tasks.filter((task) => task.category === cat)}
+            key={cat.id}
           />
         );
       })}

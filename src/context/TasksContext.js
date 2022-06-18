@@ -7,7 +7,7 @@ const TasksContext = createContext();
 export const TaskProvider = ({ children }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [tasks, setTasks] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [tasksLoading, setTasksLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export const TaskProvider = ({ children }) => {
     const response = await fetch("/tasks");
     const data = await response.json();
     setTasks(data);
-    setLoading(false);
+    setTasksLoading(false);
   };
 
   const addTask = async (task) => {
@@ -72,7 +72,7 @@ export const TaskProvider = ({ children }) => {
         deleteTask,
         setComplete,
         doneEditing,
-        loading,
+        tasksLoading,
         isEditing,
         setIsEditing,
         setShowModal,

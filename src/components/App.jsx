@@ -5,9 +5,9 @@ import Summary from "./summary/Summary";
 import Body from "./body/Body";
 import { categories } from "./data/categories";
 import { TaskProvider } from "../context/TasksContext";
-import { CategoryProvider } from "../context/CaegotiesContext";
+import { CategoryProvider } from "../context/CategoriesContext";
 import { useContext, useState, useEffect } from "react";
-import CategoriesContext from "../context/CaegotiesContext";
+import CategoriesContext from "../context/CategoriesContext";
 
 function App() {
   return (
