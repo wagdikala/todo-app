@@ -1,12 +1,6 @@
 {
   "tasks": [
     {
-      "taskTitle": "nnnn",
-      "isCompleted": false,
-      "category": "Work",
-      "id": 3
-    },
-    {
       "taskTitle": "jjjj",
       "isCompleted": false,
       "category": "Home",
@@ -14,13 +8,13 @@
     },
     {
       "taskTitle": "nnn",
-      "isCompleted": false,
+      "isCompleted": true,
       "category": "Home",
       "id": 5
     },
     {
       "taskTitle": "jjj",
-      "isCompleted": false,
+      "isCompleted": true,
       "category": "Home",
       "id": 8
     },
@@ -32,13 +26,13 @@
     },
     {
       "taskTitle": "nnn",
-      "isCompleted": false,
+      "isCompleted": true,
       "category": "Work",
       "id": 10
     },
     {
       "taskTitle": "nmnmnmn",
-      "isCompleted": false,
+      "isCompleted": true,
       "category": "Work",
       "id": 11
     },
@@ -50,13 +44,13 @@
     },
     {
       "taskTitle": "dd",
-      "isCompleted": false,
+      "isCompleted": true,
       "category": "Work",
       "id": 13
     },
     {
       "taskTitle": "jj",
-      "isCompleted": false,
+      "isCompleted": true,
       "category": "Work",
       "id": 14
     },
@@ -65,26 +59,20 @@
       "isCompleted": false,
       "category": "Home",
       "id": 15
-    },
-    {
-      "taskTitle": "ff",
-      "isCompleted": false,
-      "category": "Shopping",
-      "id": 16
     }
   ],
-  "categoris": [
+  "categories": [
     {
       "categoryName": "Home",
-      "color": "#F72585"
+      "categoryColor": "#F72585"
     },
     {
       "categoryName": "Work",
-      "color": "#180545"
+      "categoryColor": "#480CA8"
     },
     {
       "categoryName": "Personal",
-      "color": "#4CC9F0"
+      "categoryColor": "#4CC9F0"
     }
   ]
 }

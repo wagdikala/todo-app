@@ -5,18 +5,22 @@ import Summary from "./summary/Summary";
 import Body from "./body/Body";
 import { categories } from "./data/categories";
 import { TaskProvider } from "../context/TasksContext";
-import CategoryModal from "./modal/CategoryModal";
+import { CategoryProvider } from "../context/CaegotiesContext";
+import { useContext, useState, useEffect } from "react";
+import CategoriesContext from "../context/CaegotiesContext";
 
 function App() {
   return (
     <TaskProvider>
-      <div className="wrapper">
-        <div className="main">
-          <Header user={"Wagdi"} />
-          <Summary categories={categories} />
-          <Body />
+      <CategoryProvider>
+        <div className="wrapper">
+          <div className="main">
+            <Header user={"Wagdi"} />
+            <Summary />
+            <Body />
+          </div>
         </div>
-      </div>
+      </CategoryProvider>
     </TaskProvider>
   );
 }

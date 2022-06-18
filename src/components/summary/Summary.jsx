@@ -1,33 +1,23 @@
 import "./summary.scss";
 import { useContext, useEffect, useState } from "react";
+import CategoriesContext from "../../context/CaegotiesContext";
 import TasksContext from "../../context/TasksContext";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-import { colors } from "../data/categoriesColors";
+import { v4 as uuidv4 } from "uuid";
+import CircularProgress from "../shared/CircularProgress";
 
-function Summary({ categories }) {
-  const [workPercentage, setWorkPercentage] = useState(0);
+function Summary() {
   const { tasks } = useContext(TasksContext);
+  const { categories } = useContext(CategoriesContext);
 
   const completedTasks = () => {
     return tasks.filter((item) => item.isCompleted).reduce((acc) => ++acc, 0);
   };
 
-  useEffect(() => {
-    const percent = Math.floor((completedTasks() / tasks.length) * 100);
-    if (tasks.length > 0) {
-      setWorkPercentage(percent);
-    }
-    // } else {
-    //   setWorkPercentage("N/A");
-    // }
-  }, [tasks]);
-
   return (
     <div className="summary-container">
       {categories.map((item) => (
         <div
-          key={item.id}
+          key={uuidv4()}
           className={`${item.categoryName.toLowerCase()} summary`}
         >
           <div className="text-stat">
@@ -41,16 +31,7 @@ function Summary({ categories }) {
             </p>
           </div>
           <div className="progress-bar">
-            <CircularProgressbar
-              value={workPercentage}
-              text={workPercentage === 0 ? `` : `${workPercentage}%`}
-              strokeWidth={9}
-              styles={buildStyles({
-                strokeLinecap: "butt",
-                pathColor: `#${colors[item.id]}`,
-                textColor: `#${colors[item.id]}`,
-              })}
-            />
+            <CircularProgress category={item} completedTasks={5} />
           </div>
         </div>
       ))}
