@@ -3,13 +3,14 @@ import { useState, useContext, useEffect } from "react";
 import "./taskList.scss";
 import TasksContext from "../../context/TasksContext";
 
-function TaskList() {
+function TaskList({ tasks }) {
   const [numberOfTasks, setNumberOfTasks] = useState(0);
-  const { tasks } = useContext(TasksContext);
 
   useEffect(() => {
+    console.log(tasks);
+
     setNumberOfTasks(tasks.length);
-  }, [tasks]);
+  }, []);
 
   return (
     <div className="container">

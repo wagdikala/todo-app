@@ -12,7 +12,6 @@ function App() {
     <TaskProvider>
       <div className="wrapper">
         <div className="main">
-          <CategoryModal className="modal" />
           <Header user={"Wagdi"} />
           <Summary categories={categories} />
           <Body />

@@ -5,7 +5,8 @@ import { useEffect, useContext } from "react";
 function CategoryModal() {
   const { showModal, setShowModal } = useContext(TasksContext);
 
-  const handleSelect = () => {
+  const handleSelect = (e) => {
+    console.log(e.target.innerHTML);
     setShowModal(false);
   };
 
@@ -16,7 +17,7 @@ function CategoryModal() {
       <h1>Select Category</h1>
       <div className="container">
         <div className="category-select">
-          <div onClick={() => handleSelect()} className="category">
+          <div onClick={handleSelect} className="category">
             <p>Work</p>
           </div>
           <div className="category">
