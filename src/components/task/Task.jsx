@@ -7,14 +7,8 @@ import Spinner from "../shared/Spinner";
 function Task({ task }) {
   const [editing, setEditing] = useState(false);
   const [text, setText] = useState(task.taskTitle);
-  const {
-    deleteTask,
-    setComplete,
-    doneEditing,
-    loading,
-    isEditing,
-    setIsEditing,
-  } = useContext(TasksContext);
+  const { deleteTask, setComplete, doneEditing, loading } =
+    useContext(TasksContext);
 
   const handleEditing = () => {
     task.taskTitle = text;

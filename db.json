@@ -1,52 +1,16 @@
 {
   "tasks": [
     {
-      "taskTitle": "sdf",
-      "isCompleted": true,
-      "id": 2,
-      "category": "Home"
-    },
-    {
-      "taskTitle": "sdf2222",
-      "isCompleted": true,
-      "id": 3,
-      "category": "Home"
-    },
-    {
-      "taskTitle": "d",
-      "isCompleted": true,
-      "category": "Work",
-      "id": 6
-    },
-    {
-      "taskTitle": "ddd",
-      "isCompleted": true,
-      "category": "Work",
-      "id": 7
-    },
-    {
-      "taskTitle": "fdg",
-      "isCompleted": false,
-      "category": "Shopping",
-      "id": 8
-    },
-    {
-      "taskTitle": "ert555",
-      "isCompleted": false,
-      "category": "Work",
-      "id": 9
-    },
-    {
-      "taskTitle": "ert",
-      "isCompleted": false,
-      "category": "Work",
-      "id": 10
-    },
-    {
-      "taskTitle": "ertwt",
+      "taskTitle": "Hellow",
       "isCompleted": false,
       "category": "Home",
-      "id": 11
+      "id": 1
+    },
+    {
+      "taskTitle": "sd",
+      "isCompleted": false,
+      "category": "Home",
+      "id": 2
     }
   ]
 }

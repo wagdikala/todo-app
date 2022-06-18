@@ -4,22 +4,10 @@ import "./taskList.scss";
 import TasksContext from "../../context/TasksContext";
 
 function TaskList({ tasks }) {
-  const [numberOfTasks, setNumberOfTasks] = useState(0);
-
-  useEffect(() => {
-    console.log(tasks);
-
-    setNumberOfTasks(tasks.length);
-  }, []);
-
   return (
     <div className="container">
       <div className="num-of-taks">
-        {numberOfTasks === 0
-          ? "No Tasks"
-          : numberOfTasks === 1
-          ? `${numberOfTasks} Task`
-          : `${numberOfTasks} Tasks`}
+        {tasks.length === 1 ? `${tasks.length} Task` : `${tasks.length} Tasks`}
       </div>
       <div className="task-list">
         {tasks.map((task) => (

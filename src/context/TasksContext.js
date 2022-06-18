@@ -9,6 +9,7 @@ export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
+  const [numberOfTasks, setNumberOfTasks] = useState(0);
 
   useEffect(() => {
     fetchData();
@@ -36,7 +37,8 @@ export const TaskProvider = ({ children }) => {
   const deleteTask = async (taskId) => {
     if (window.confirm("Are you sure you want to delete?")) {
       await fetch(`tasks/${taskId}`, { method: "DELETE" });
-      setTasks(tasks.filter((task) => task.id !== taskId));
+      fetchData();
+      // setTasks(tasks.filter((task) => task.id !== taskId));
     }
   };
 
@@ -48,9 +50,9 @@ export const TaskProvider = ({ children }) => {
       },
       body: JSON.stringify(task),
     });
-
-    const data = await response.json();
-    setTasks(tasks.map((item) => (task.id === item.id ? data : item)));
+    fetchData();
+    // const data = await response.json();
+    // setTasks(tasks.map((item) => (task.id === item.id ? data : item)));
   };
 
   const doneEditing = async (task) => {
