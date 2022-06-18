@@ -72,5 +72,19 @@
       "category": "Shopping",
       "id": 16
     }
+  ],
+  "categoris": [
+    {
+      "categoryName": "Home",
+      "color": "#F72585"
+    },
+    {
+      "categoryName": "Work",
+      "color": "#180545"
+    },
+    {
+      "categoryName": "Personal",
+      "color": "#4CC9F0"
+    }
   ]
 }

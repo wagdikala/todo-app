@@ -9,7 +9,6 @@ export const TaskProvider = ({ children }) => {
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
-  const [numberOfTasks, setNumberOfTasks] = useState(0);
 
   useEffect(() => {
     fetchData();
@@ -23,7 +22,7 @@ export const TaskProvider = ({ children }) => {
   };
 
   const addTask = async (task) => {
-    const response = await fetch("/tasks", {
+    await fetch("/tasks", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -31,8 +30,6 @@ export const TaskProvider = ({ children }) => {
       body: JSON.stringify(task),
     });
     fetchData();
-    // const data = await response.json();
-    // setTasks([...tasks, data]);
   };
 
   const deleteTask = async (taskId) => {
