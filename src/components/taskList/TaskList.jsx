@@ -1,6 +1,7 @@
 import Task from "../task/Task";
 import { useState, useContext, useEffect } from "react";
 import "./taskList.scss";
+import { v4 as uuidv4 } from "uuid";
 import TasksContext from "../../context/TasksContext";
 
 function TaskList({ tasks, category }) {
@@ -16,7 +17,7 @@ function TaskList({ tasks, category }) {
         {tasks.map((task) => (
           <Task
             task={task}
-            key={task.id}
+            key={uuidv4()}
             categoryColor={category.categoryColor}
           />
         ))}
